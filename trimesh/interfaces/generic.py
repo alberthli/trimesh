@@ -93,8 +93,11 @@ class MeshScript:
                        startupinfo=startupinfo)
 
         # bring the binaries result back as a set of Trimesh kwargs
-        mesh_results = exchange.load.load_mesh(
-            self.mesh_post.name, **self.kwargs)
+        # mesh_results = exchange.load.load_mesh(self.mesh_post.name, **self.kwargs)
+        mesh_results = exchange.load.load_mesh("decomp.stl", **self.kwargs)
+        os.remove("decomp.stl")
+        os.remove("decomp.mtl")
+        os.remove("decomp.obj")
 
         return mesh_results
 
@@ -108,4 +111,4 @@ class MeshScript:
         os.remove(self.script_out.name)
         for file_obj in self.mesh_pre:
             os.remove(file_obj.name)
-        os.remove(self.mesh_post.name)
+        # os.remove(self.mesh_post.name)
