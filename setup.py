@@ -7,7 +7,7 @@ from setuptools import setup
 # load __version__ without importing anything
 _version_file = os.path.join(
     os.path.dirname(__file__),
-    'trimesh', 'version.py')
+    'trimesh_fork', 'version.py')
 
 if os.path.isfile(_version_file):
     with open(_version_file, 'r') as f:
@@ -104,7 +104,7 @@ def format_all():
         # note that it always checks against the lower case
         word_skip = "datas,coo,nd,files',filetests,ba,childs,whats"
         # files to skip spelling on
-        file_skip = "*.pyc,*.zip,.DS_Store,*.js,./trimesh/resources"
+        file_skip = "*.pyc,*.zip,.DS_Store,*.js,./trimesh_fork/resources"
         spell = ['codespell', '-i', '3',
                  '--skip=' + file_skip,
                  '-L', word_skip, '-w', target]
@@ -122,7 +122,7 @@ def format_all():
         subprocess.check_call(flake)
 
     # run on our target locations
-    for t in ['trimesh', 'tests', 'examples']:
+    for t in ['trimesh_fork', 'tests', 'examples']:
         run_on(t)
 
 
@@ -186,18 +186,18 @@ setup(name='trimesh_fork',
           'Natural Language :: English',
           'Topic :: Scientific/Engineering'],
       packages=[
-          'trimesh',
-          'trimesh.ray',
-          'trimesh.path',
-          'trimesh.path.exchange',
-          'trimesh.scene',
-          'trimesh.voxel',
-          'trimesh.visual',
-          'trimesh.viewer',
-          'trimesh.exchange',
-          'trimesh.resources',
-          'trimesh.interfaces'],
-      package_data={'trimesh': ['resources/templates/*',
+          'trimesh_fork',
+          'trimesh_fork.ray',
+          'trimesh_fork.path',
+          'trimesh_fork.path.exchange',
+          'trimesh_fork.scene',
+          'trimesh_fork.voxel',
+          'trimesh_fork.visual',
+          'trimesh_fork.viewer',
+          'trimesh_fork.exchange',
+          'trimesh_fork.resources',
+          'trimesh_fork.interfaces'],
+      package_data={'trimesh_fork': ['resources/templates/*',
                                 'resources/*.json',
                                 'resources/schema/*',
                                 'resources/schema/primitive/*.json',

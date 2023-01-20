@@ -7,7 +7,7 @@ SHELL := bash
 .SUFFIXES:
 
 # get the git short hash and trimesh semver.
-VERSION := $(shell python trimesh/version.py)
+VERSION := $(shell python trimesh_fork/version.py)
 GIT_SHA := $(shell git rev-parse --short HEAD)
 
 # for coverage reports
