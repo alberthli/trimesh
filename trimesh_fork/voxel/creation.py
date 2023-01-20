@@ -258,7 +258,7 @@ def voxelize_binvox(
     --------------
     `ValueError` if `bounds is not None and 'bounding_box' in binvoxer_kwargs`.
     """
-    from trimesh.exchange import binvox
+    from trimesh_fork.exchange import binvox
 
     if dimension is None:
         # pitch must be provided

@@ -247,7 +247,7 @@ def export_scene(scene,
     elif file_type == 'dict64':
         data = scene_to_dict(scene, use_base64=True)
     elif file_type == 'svg':
-        from trimesh.path.exchange import svg_io
+        from trimesh_fork.path.exchange import svg_io
         data = svg_io.export_svg(scene, **kwargs)
     elif file_type == 'ply':
         data = export_ply(scene.dump(concatenate=True), **kwargs)

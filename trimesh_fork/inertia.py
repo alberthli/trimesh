@@ -10,7 +10,7 @@ internal consistency.
 
 import numpy as np
 
-from trimesh import util
+from . import util
 
 
 def cylinder_inertia(mass, radius, height, transform=None):
