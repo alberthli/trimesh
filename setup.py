@@ -162,7 +162,7 @@ elif '--bump' in sys.argv:
 
 
 # call the magical setuptools setup
-setup(name='trimesh',
+setup(name='trimesh_fork',
       version=__version__,
       description='Import, export, process, analyze and view triangular meshes.',
       long_description=long_description,
